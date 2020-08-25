@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-fluid sidebar tabs position-fixed">
+                <a href="#" class="active" data-tab-target="#Menu_List"><img class="icon" src="./img/food.svg" alt=""></a>
+                <a href="#" data-tab-target="#Stats"><img class="icon" src="./img/graph.svg" alt=""></a>
+                <a href="#addMenu" data-toggle="modal" data-target="#addMenu"><img class="icon" src="./img/more (1).svg" alt=""></a>    
+            </nav>
+            <div class="col-fluid tab-content">
+                <section class="col-12 active " data-tab-content id="Menu_List">
+                    <div class="row">
+                        <div class="col-fluid content">
+                            <header class="col-fluid position-fixed">
+                                <div class="row header-row">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <img class="icon-menu" src="./img/open-menu.svg" alt="">
+                                      </button>
+                                    <h3 class="title">Food Menu</h3>
+                                    <div class="col-fluid">
+                                        <a href="#viewCart" data-toggle="modal" data-target="#viewCart" class="shopping-cart"><i class="fas fa-shopping-cart icon-shopping-cart"></i><span class="number-cart">0</span></a>
+                                        <a href="#"><img class="icon-search" src="./img/search.svg" alt=""></a>    
+                                    </div>
+                                    
+
+                                </div>
+                            </header>
+                            <div class="container-fluid ">
+                                <div class=" mobile-nav ">
+                                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                        <div class="tabs collapse navbar-collapse" id="navbarSupportedContent">
+                                          <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item active">
+                                              <a  data-tab-target="#Menu_List" class= "nav-link" href="#"><img class="icon-mobile" src="./img/food.svg" alt=""><span>List Menu</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a data-tab-target="#Stats" class="nav-link" href="#"><img class="icon-mobile" src="./img/graph.svg" alt=""><span>History</span></a>
+                                            </li>
+                                            
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#addMenu" data-toggle="modal" data-target="#addMenu" tabindex="-1" aria-disabled="true"><img class="icon-mobile" src="./img/more (1).svg" alt=""><span>Add Menu</span></a>
+                                            </li>
+                                          </ul>
+                                       </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-fluid body-content  position-relative d-flex align-content-start flex-wrap">
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/jeremy-ricketts-6ZnhM-xBpos-unsplash.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Espresso</p>
+                                        <p class="food-price"><b>Rp. 10.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/bear.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Cofee Latte</p>
+                                        <p class="food-price"><b>Rp. 15.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/firdaus-roslan-pN769u0KHNA-unsplash.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Cappucino</p>
+                                        <p class="food-price"><b>Rp. 5.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/redvelvet.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Red Velvet Latte</p>
+                                        <p class="food-price"><b>Rp. 33.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/chocorum.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Choco Rhum</p>
+                                        <p class="food-price"><b>Rp. 28.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/blackforest.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Black Forest</p>
+                                        <p class="food-price"><b>Rp. 30.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/chickenkatsu.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Chicken Katsu</p>
+                                        <p class="food-price"><b>Rp. 60.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/salmon.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Salmon Truffle</p>
+                                        <p class="food-price"><b>Rp. 60.000</b></p>
+                                    </div>
+                                </div>
+                                <div class="card-menu">
+                                    <div class="card" >
+                                        <img class="card-img card-photo" src="./img/wiener.png">   
+                                        <div class="card-img-overlay overlay d-flex ">
+                                            <div class="my-auto mx-auto text-center">
+                                                <a href=""><i class="far fa-check-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="food-name">Wiener Schitzel</p>
+                                        <p class="food-price"><b>Rp. 69.000</b></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <aside class="col-fluid position-relative">
+                            <div class="col-fluid cart-header position-fixed ">
+                                <h3 class="cart-title">Cart <span class="number-cart">0</span></h3>
+                            </div>
+                            <div  class="col-fluid cart-body not-empty">
+                                <div  class="d-flex flex-column ">
+                                    <div class="cart-body-cards">
+
+                                        </div>
+    
+                                    <div class="justify-content-end checkout-order">
+                                        <div class="row total-price-order" ><span style="font-size: 30px;"><b>Total : </b> </span> <span style="font-size: 25px;"><span class="total-price">Rp. 0</span><span>*</span></span></div>
+                                        <span style="font-style: 25px;">* Belum termasuk ppn</span>
+                                        
+                                        <button type="button" class="btn purchase-btn btn-lg btn-block" data-toggle="modal" data-target="#modalPurchase">Purchase</button>
+                                        <button type="button" class="btn btn-cancel btn-lg btn-block">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-fluid cart-empty">
+                                <img src="./img/food-and-restaurant.png" alt="">
+                                <h3>Your cart is empty</h3>
+                                <p>Please add some items from the menu</p>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+                <section class="col-12"  data-tab-content id="Stats">
+                    <header class="col-fluid header-stats position-fixed">
+                        <div class="row header-row-stats">
+                            <a href="#"><img class="icon-menu icon-menu-stats" src="./img/open-menu.svg" alt=""></a>
+                            <h3 class="title-stats">History</h3>
+                        </div>
+                    </header>
+                    <div class=" col-fluid position-relative body-content-stats">
+                        <div class="col-fluid cards-history d-flex flex-wrap">
+                            <div class="today-income">
+                                <p style="font-size: 15px; ">Today's Income</p>
+                                <p style="font-size: 35px; margin-top: -20px;">Rp. 1.000.000</p>
+                                <p style="font-size: 20px; margin-top: -20px;">+2% Yesterday</p>
+                            </div>
+                            <div class="orders">
+                                <p style="font-size: 15px; ">Orders</p>
+                                <p style="font-size: 35px; margin-top: -20px;">3.270</p>
+                                <p style="font-size: 20px; margin-top: -20px;">+5% Last Week</p>
+                            </div>
+                            <div class="years-income">
+                                <p style="font-size: 15px; ">This Year's Income</p>
+                                <p style="font-size: 35px; margin-top: -20px;">Rp. 100.000.000.000</p>
+                                <p style="font-size: 20px; margin-top: -20px;">+10% Last Year</p>
+                            </div>
+                        </div>
+                        <div class="col-fluid row  justify-content-center graph-history ">
+                            <form>
+                                <div class="form-group row">
+                                    <label style="text-align: left; font-size: 30px; font-weight: 700;"  class=" col-md-10 col-form-label col-form-label-sm">Revenue</label>
+                                    <div class="align-items-right col-md-2">
+                                        <select id="inputState" class="form-control-sm">
+                                            <option selected>Month</option>
+                                            <option>Day</option>
+                                            <option>Year</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12 center chart-container" style="position: relative; height:40vh; width:80vw">
+                                    <canvas id="myChart" width="20" height="6"></canvas>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="col-fluid row justify-content-center table-history  ">
+                            <div class="col-md-10 row">
+                                <label style="text-align: left; font-size: 30px; font-weight: 700;"  class=" col-md-10 col-form-label col-form-label-sm">Recent Order</label>
+                                    <div class="align-items-right col-md-2">
+                                        <select id="inputState" class="form-control-sm">
+                                            <option selected>Today</option>
+                                            <option>Yesterday</option>
+                                            <option>This Month</option>
+                                          </select>
+                                    </div>
+                            </div>
+                            <div class="col-md-10">
+                                <table class="table" style="text-align: center;">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">INVOICES</th>
+                                        <th scope="col">CASHIER</th>
+                                        <th scope="col">DATE</th>
+                                        <th scope="col">ORDERS</th>
+                                        <th scope="col">AMOUNT</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>#10928</td>
+                                        <td>Cashier 1</td>
+                                        <td >06 October 2019</td>
+                                        <td>ICE Tea, Salad</td>
+                                        <td>Rp. 120.000</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+   
+    <!--Modal Add Menu-->
+    <div class="modal fade addMenu" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="addMenu" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Item</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="event.preventDefault();" autocomplete="off">
+                    <div class="form-group">
+                      <input type="text" class="form-control add-name" id="food-name" placeholder="Name ..." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control add-image"  id="food-image" placeholder="Image ..." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control add-price"  id="food-price" placeholder="Price ..." required>
+                    </div>
+                    <select class="form-control col-md-4 add-category" id="add-category" required>
+                        <option>Select category</option>    
+                        <option>Drink</option>
+                        <option>Cake</option>    
+                        <option>Food</option>        
+                      </select>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" style=" background-color: #F24F8A; color: white; " data-dismiss="modal">Cancel</button>
+              <button class="add-Menu" type="button" class="btn" >add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--MOdal View Cart-->
+    <div class="modal fade viewCart" id="viewCart" tabindex="-1" role="dialog" aria-labelledby="viewCart" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title " id="exampleModalLabel">Cart <span class="number-cart">0</span></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal-body-cart">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" style=" background-color: #F24F8A; color: white; " data-dismiss="modal">Cancel</button>
+              <button class="add-Menu" type="button" class="btn" >add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Modal Purchase-->
+    <div class="modal fade" id="modalPurchase" tabindex="-1" role="dialog" aria-labelledby="modalPurchase" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="purchase-header">
+                <p style="text-align: left;"><span style="font-size: 30px; font-weight: none;">Checkout</span>  <span style="float: right; margin-top: 10px;">Receipt no: #<span>010410919</span></span></p>
+                <p>Cashier: Pevita Pearce</p>
+              </div>
+              <div class="purchase-body">
+                
+              </div>
+              <div class="purchase-footer col-fluid">
+                  <p style="text-align:left;">Ppn 10% <span style="float: right;">Rp. <span class="ppn">0</span></span></p>
+                  <p style="text-align:right;"> Total : Rp. <span class="purchase-total-price">0</span></p>
+                  <p>Payment : Cash</p>
+                  <div class="purchase-button-column">
+                    <button type="button" class="btn btn-print btn-lg btn-block" >Print</button>
+                    <p style="text-align: center;">Or</p>
+                    <button type="button" class="btn btn-email btn-lg btn-block">Send Email</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./js/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
